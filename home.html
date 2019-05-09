@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="home.js"></script>
+    <style type="text/css">
+        .container {
+            padding: 16px;
+        }
+        #nomatch{
+            color: red;
+            visibility: hidden;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<!--login-->
+<form class="login" action="login.php" method="post">
+    <h1>Registered Users:</h1>
+    <div class="container">
+        <label>Username</label>
+        <input type="text" placeholder="Enter Username" required> <br><br>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" required><br><br>
+
+        <button type="submit" value="Log in">Login</button>
+    </div>
+</form>
+<!--sign up-->
+ <form class="login" action="signup.php" method="post">
+        <div class="container">
+            <h1>New Users: </h1>
+            <label>First name</label>
+            <input type="text" placeholder="Enter first name" name="firstname" required><br><br>
+            <label>Last name</label>
+            <input type="text" placeholder="Enter last name" name="lastname" required><br><br>
+            <label>Phone</label>
+            <input type="number" placeholder="Enter User name" name="phone" required><br><br>
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" name="email" required><br><br>
+            <label>User name</label>
+            <input type="text" placeholder="Enter username" name="username" required><br><br>
+            <label>Password</label>
+            <input id="pw" type="password" placeholder="Enter Password" required><br><br>
+            <label>Retype Password</label>
+            <input id="repw" type="password" placeholder="Retype Password" required onkeyup=" passMatch()"><br>
+
+            <span id="nomatch">*password not matched</span><br><br>
+
+            <button type="submit" name="signup" value="sign up">Sign Up</button>
+        </div>
+    </form>
+
+
+
+</body>
+</html>
